@@ -1,0 +1,180 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta name="author" content="suhail vs">
+    
+    <meta name="domain" content="stackschools.com"/>
+    <meta name="title" content="A. M. M. H. S. Othera Pathanamthitta" />
+
+    <meta name="description" content="A. M. M. H. S. Othera, Pullad, Pathanamthitta"/>
+    <meta name="url" content="https://stackschools.com/" />
+
+    <title>A. M. M. H. S. Othera -  - Stack Schools</title>
+    <link rel="icon" href="/static/img/favicon.png">
+    
+    
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="/static/bootstrap5/bootstrap.css">
+      <!-- Custom styles for this template -->  
+      <style>
+        .container {
+        max-width: 800px;
+      }
+      </style>
+    
+    
+      
+      
+        <!-- No Google Analytics(google_analytics_status false) -->
+      
+    
+
+    
+  
+    <!-- <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/> -->
+    <link href="/static/leaflet/leaflet.css" rel="stylesheet"/>
+  
+
+  </head>
+
+  <body>
+    
+    
+    <nav class="navbar navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/static/img/stackschools.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          StackSchools
+        </a>
+        <div class="col-md-3 text-end">
+          <a class="btn btn-primary me-2" href="/accounts/login/">Login</a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container mt-3">
+    
+
+
+<!-- School info -->
+<div class="card">
+  <div class="card-header"> 
+    <h2>A. M. M. H. S. Othera</h2>
+    <!-- <a href="http://103.251.43.156/schoolfixation/index.php/Publicview/index/schoolsdetails/9899">A. M. M. H. S. Othera</a> -->
+  </div>
+  <div class="card-body">
+    
+
+    <div class="row">
+      <div class="col-md-7">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-dark">Head Master: <strong>BINU K MATHEW</strong></li>
+          <li class="list-group-item list-group-item-dark">HS Section Phone: <strong>04692656722</strong></li>
+          <li class="list-group-item list-group-item-dark">HS Section Email: <strong>ammhsothera@gmail.com</strong></li>
+          
+          
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Address</h5>
+            <p class="text-info">എ. എം. എം. ഹൈസ്കൂൾ ഓതറ<br>ഓതറ വെസറ്റ്, പത്തനംതിട്ട‌<br>689551<br>ഓതറ</p>
+            <a href="" class="card-link">View on Google Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+
+    
+      <div id="osm-map" style="height: 280px;"></div><hr>
+    
+
+    <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead>
+        <tr>
+          <th>School Code</th>
+          <th>District</th>
+          <th>Educational District</th>
+          <th>Sub District</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>37015 </td>
+          <td>Pathanamthitta </td>
+          <td>Tiruvalla </td>
+          <td>Pullad </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+<hr>
+
+
+
+     
+    
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">© 2022 StackSchools, Donams</p>
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="/static/img/stackschools.svg" width="30" height="30" class="d-inline-block align-top mr-2" alt="">
+        </a>
+    
+      </footer>
+    </div>
+    
+
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/jquery/jquery-3.3.1.min.js"></script>
+    
+    <script src="/static/bootstrap5/bootstrap.bundle.min.js"></script>
+    
+
+    
+
+
+<!--https://stackoverflow.com/a/41753557/2351696-->
+
+<!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+<script src="/static/leaflet/leaflet.js"></script>
+<script>
+// Create Leaflet map on map element.
+let map = L.map(document.getElementById('osm-map'));
+
+// Add OSM tile layer to the Leaflet map.
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Target's GPS coordinates.
+// let target = L.latLng(9.357886, 76.621292);
+
+  // use data scraped from https://schoolwiki.in/index.php?title=20001
+  let target = L.latLng(9.357886, 76.621292);
+
+
+// Set map's center to target with zoom 14.
+map.setView(target, 14);
+
+// Place a marker on the same location.
+L.marker(target).addTo(map);
+</script>
+
+
+
+
+    
+  </body>
+</html>
